@@ -183,12 +183,6 @@ public class NamespaceHelperTest {
     }
     
 
-    /**
-     * Test of getAllNamespaces method, of class NamespaceHelper.
-     */
-    @Test
-    public void testGetAllNamespaces() {
-
-    }
+    
 
 }
