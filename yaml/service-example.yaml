@@ -1,0 +1,15 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "service-test-name"
+  namespace: "service-test-namespace"
+spec:
+  ports:
+  - name: "service-test-port-name"
+    port: 80
+    protocol: "TCP"
+    targetPort: 8080
+  selector:
+    service-test-selector-key: "service-test-selctor-value"
+  type: "NodePort"

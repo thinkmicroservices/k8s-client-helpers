@@ -1,0 +1,25 @@
+
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  labels:
+    test: "deployment"
+  name: "test-deployment-name"
+  namespace: "test-deployment-namespace"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "httpd"
+  template:
+    metadata:
+      labels:
+        app: "httpd"
+    spec:
+      containers:
+      - command:
+        - "sleep"
+        - "36000"
+        image: "busybox"
+        name: "busybox"

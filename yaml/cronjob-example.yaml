@@ -1,0 +1,28 @@
+---
+apiVersion: "batch/v1"
+kind: "CronJob"
+metadata:
+  creationTimestamp: "2021-07-16T02:19:22.153305192Z"
+  generation: 1
+  labels:
+    label1: "maximum-length-of-63-characters"
+  name: "hello"
+  resourceVersion: "1"
+  uid: "754fbba0-beb6-4d5c-b2ae-f1ba4399f21d"
+spec:
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - args:
+            - "/bin/sh"
+            - "-c"
+            - "date; echo Hello from Kubernetes"
+            image: "busybox"
+            name: "hello"
+          restartPolicy: "Never"
+  schedule: "*/5 * * * *"
+
+
+
